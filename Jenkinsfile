@@ -6,6 +6,7 @@ pipeline {
 			sh 'python -m venv .venv'
 			sh '''
 				. .venv/bin/activate
+				python3 -m pip install flask
 				pip install -r requirements.txt
 			
 			'''

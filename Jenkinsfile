@@ -6,7 +6,7 @@ pipeline {
 			sh 'python -m venv .venv'
 			sh '''
 				. .venv/bin/activate
-				sudo pip install -r requirements.txt
+				pip install -r requirements.txt
 			
 			'''
       

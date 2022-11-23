@@ -1,13 +1,12 @@
 pipeline {
-  agent { docker { image 'python:3.8' } }
+  agent { docker { image 'python' } }
   stages {
     stage('build') {
       steps {
 			sh 'python -m venv .venv'
 			sh '''
 				. .venv/bin/activate
-				python3 -m pip install flask
-				pip install -r requirements.txt
+				sudo pip install -r requirements.txt
 			
 			'''
       
